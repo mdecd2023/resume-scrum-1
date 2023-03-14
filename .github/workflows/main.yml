@@ -21,7 +21,7 @@ jobs:
         run:
           sudo apt install -y texlive texlive-xetex texlive-lang-chinese gsfonts fonts-moe-standard-kai ttf-mscorefonts-installer librsvg2-bin texlive-fonts-extra 
       - name: Test LaTeX
-        working-directory: ./LaTeX報告
+        working-directory: ./latex
         run: |
           xelatex 4072pj1.tex
           xelatex 4072pj1.tex
@@ -51,6 +51,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} 
-          asset_path: ./LaTeX報告/4072pj1.pdf
+          asset_path: ./latex/4072pj1.pdf
           asset_name: 4072pj1.pdf
           asset_content_type: pdf
