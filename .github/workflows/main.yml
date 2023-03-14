@@ -24,9 +24,9 @@ jobs:
       - name: Test LaTeX
         working-directory: ./latex
         run: |
-          xelatex 4082pj1.tex
-          xelatex 4082pj1.tex
-          xelatex 4082pj1.tex
+          pdflatex 4082pj1.tex
+          pdflatex 4082pj1.tex
+          pdflatex 4082pj1.tex
 
       - name: Bump version and push tag
         id: tag_version
