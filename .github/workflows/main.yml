@@ -21,7 +21,6 @@ jobs:
         run:
           # using xetex engine to compile LaTeX macro based .tex files
           sudo apt install -y texlive texlive-xetex texlive-lang-chinese gsfonts fonts-moe-standard-kai ttf-mscorefonts-installer librsvg2-bin texlive-fonts-extra
-          sudo reboot
       - name: Test LaTeX
         working-directory: ./latex
         run: |
